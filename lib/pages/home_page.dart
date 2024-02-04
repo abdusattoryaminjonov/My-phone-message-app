@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -48,7 +48,13 @@ class _HomePageState extends State<HomePage> {
           Container(
             child:Column(
               children: [
-                // _itemList(message: "Hi"),
+                _itemList(name: "John",image: "assets/images/im_human1.png",message: "Hi "),
+                _itemList(name: "Alex",image: "assets/images/im_human2.png",message: "Hi  fsdafasdf  sfwer sdf23r 2dsdf wer23c fwe fwer3r234"),
+                _itemList(name: "Bob",image: "assets/images/im_human3.png",message: "Hi  fsdafasdf afasdf fwerfew weqrwer werwett 2323 ssdf 23234  sfwer sdf23r 2dsdf wer23c fwe fwer3r234"),
+                _itemList(name: "Maketh",image: "assets/images/im_human4.png",message: "23234  sfwer sdf23r 2dsdf wer23c fwe fwer3r234"),
+                _itemList(name: "Liza",image: "assets/images/im_human5.png",message: "Hi  fsdafasdf afasdf fwerfew weqrwer werwett 2323 ssdf 23234  sfwer sdf23r 2dsdf wer23c fwe fwer3r234"),
+                _itemList(name: "Artur",image: "assets/images/im_human6.png",message: "Hi  fsdafasdf  sfwer sdf23r 2dsdf wer23c fwe fwer3r234"),
+                _itemList(name: "Karl",image: "assets/images/im_human7.png",message: "Hi  fsdafasdf afasdf fwerfew weqrwer "),
               ],
             )
           ),
@@ -82,6 +88,7 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(icon: Icon(Icons.notifications),label: "Notification"),
         ],
         currentIndex: _selectedIndex,
+        backgroundColor: Colors.blueAccent,
         selectedItemColor: Colors.black,
         onTap: (int index){
           setState(() {
@@ -199,29 +206,68 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-  Widget _itemList({message,image}){
+  Widget _itemList({message,image,name}){
     return Container(
-      height: 60,
-      color: Colors.orange,
+      height: 85,
+      padding: EdgeInsets.all(15),
+      decoration:  BoxDecoration(
+        border: Border.all(color: Colors.grey,width:0.1),
+      ),
       child: Row(
         children: [
           Image(
+            width: 50,
             image: AssetImage(image),
           ),
+          SizedBox(width: 10,),
           Expanded(
-            child: Text(
-              message,
-              style: TextStyle(
-                color: Colors.black54,
-                fontSize: 20,
-              ),
-            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  child: Row(
+                    children: [
+                      Container(
+                        child: Text(
+                          name,
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 10,),
+                      Container(
+                        child: Text("${DateTime.now().hour}:${DateTime.now().minute}",
+                          style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Flexible(
+                  child: Container(
+                    child:Text(
+                      message,
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        fontSize: 13,
+                        fontStyle: FontStyle.italic
+                      ),
+                    )
+                  ),
+                )
+              ],
+            )
           ),
           Container(
-            width: 30,
+            width: 50,
             child: Icon(
               Icons.navigate_next,
-              size: 20,
+              size: 30,
             ),
           ),
         ],
