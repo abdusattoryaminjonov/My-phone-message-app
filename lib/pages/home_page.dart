@@ -46,17 +46,17 @@ class _HomePageState extends State<HomePage> {
           ),
 
           Container(
-            child:Column(
-              children: [
-                _itemList(name: "John",image: "assets/images/im_human1.png",message: "Hi "),
-                _itemList(name: "Alex",image: "assets/images/im_human2.png",message: "Hi  fsdafasdf  sfwer sdf23r 2dsdf wer23c fwe fwer3r234"),
-                _itemList(name: "Bob",image: "assets/images/im_human3.png",message: "Hi  fsdafasdf afasdf fwerfew weqrwer werwett 2323 ssdf 23234  sfwer sdf23r 2dsdf wer23c fwe fwer3r234"),
-                _itemList(name: "Maketh",image: "assets/images/im_human4.png",message: "23234  sfwer sdf23r 2dsdf wer23c fwe fwer3r234"),
-                _itemList(name: "Liza",image: "assets/images/im_human5.png",message: "Hi  fsdafasdf afasdf fwerfew weqrwer werwett 2323 ssdf 23234  sfwer sdf23r 2dsdf wer23c fwe fwer3r234"),
-                _itemList(name: "Artur",image: "assets/images/im_human6.png",message: "Hi  fsdafasdf  sfwer sdf23r 2dsdf wer23c fwe fwer3r234"),
-                _itemList(name: "Karl",image: "assets/images/im_human7.png",message: "Hi  fsdafasdf afasdf fwerfew weqrwer "),
-              ],
-            )
+              child:Column(
+                children: [
+                  _itemList(name: "John",image: "assets/images/im_human1.png",message: "Hi "),
+                  _itemList(name: "Alex",image: "assets/images/im_human2.png",message: "Hi  fsdafasdf  sfwer sdf23r 2dsdf wer23c fwe fwer3r234"),
+                  _itemList(name: "Bob",image: "assets/images/im_human3.png",message: "Hi  fsdafasdf afasdf fwerfew weqrwer werwett 2323 ssdf 23234  sfwer sdf23r 2dsdf wer23c fwe fwer3r234"),
+                  _itemList(name: "Maketh",image: "assets/images/im_human4.png",message: "23234  sfwer sdf23r 2dsdf wer23c fwe fwer3r234"),
+                  _itemList(name: "Liza",image: "assets/images/im_human5.png",message: "Hi  fsdafasdf afasdf fwerfew weqrwer werwett 2323 ssdf 23234  sfwer sdf23r 2dsdf wer23c fwe fwer3r234"),
+                  _itemList(name: "Artur",image: "assets/images/im_human6.png",message: "Hi  fsdafasdf  sfwer sdf23r 2dsdf wer23c fwe fwer3r234"),
+                  _itemList(name: "Karl",image: "assets/images/im_human7.png",message: "Hi  fsdafasdf afasdf fwerfew weqrwer "),
+                ],
+              )
           ),
 
           Container(
@@ -221,47 +221,47 @@ class _HomePageState extends State<HomePage> {
           ),
           SizedBox(width: 10,),
           Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  child: Row(
-                    children: [
-                      Container(
-                        child: Text(
-                          name,
-                          style: TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    child: Row(
+                      children: [
+                        Container(
+                          child: Text(
+                            name,
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
-                      ),
-                      SizedBox(width: 10,),
-                      Container(
-                        child: Text("${DateTime.now().hour}:${DateTime.now().minute}",
-                          style: TextStyle(
-                            fontSize: 13,
-                            fontWeight: FontWeight.bold,
+                        SizedBox(width: 10,),
+                        Container(
+                          child: Text("${DateTime.now().hour}:${DateTime.now().minute}",
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                      )
-                    ],
+                        )
+                      ],
+                    ),
                   ),
-                ),
-                Flexible(
-                  child: Container(
-                    child:Text(
-                      message,
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                        fontSize: 13,
-                        fontStyle: FontStyle.italic
-                      ),
-                    )
-                  ),
-                )
-              ],
-            )
+                  Flexible(
+                    child: Container(
+                        child:Text(
+                          message,
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              fontSize: 13,
+                              fontStyle: FontStyle.italic
+                          ),
+                        )
+                    ),
+                  )
+                ],
+              )
           ),
           Container(
             width: 50,
